@@ -3,21 +3,21 @@
 # Задайте натуральное число N. 
 # Напишите программу, которая составит список простых множителей числа N.
 
-def getListMult(numN):
+def getListMult(x):
     list = []
-    listMult = [list.append(i) for i in range(1, numN+1) if numN % i == 0]
+    listMult = [list.append(i) for i in range(1, x+1) if x % i == 0]
     return list
 
-def primeNum(numN):
+def primeNum(x):
     primeList = []
-    for i in range(2, numN):
-        while numN % i == 0:
-            numN /= i
+    for i in range(2, x):
+        while x % i == 0:
+            x /= i
             primeList.append(i)
     return primeList
 
-numN = int(input("Введите натуральное число: "))
-list1 = getListMult(numN)
-print(f'Множители числа {numN} : {list1}')
-list2 = primeNum(numN)
-print(f'Простые множители числа {numN} :{list2}')
+x = int(input("Введите натуральное число: "))
+list1 = getListMult(x)
+print(f'Множители числа {x} : {list1}')
+list2 = primeNum(x)
+print(f'Простые множители числа {x} :{list2}')
